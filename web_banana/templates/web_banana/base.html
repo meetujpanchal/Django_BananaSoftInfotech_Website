@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myself Page</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+        <!--Start Header-->
+        {% include 'web_banana/top.html' %}
+        <!--End Header-->
+
+        <!--Start Top-->
+        {% include 'web_banana/menu.html' %}
+        <!--End Top-->
+
+        <!--Start Slider-->
+        {% include 'web_banana/slider.html' %}
+        <!--End slider-->    
+
+        {% block content %}
+        
+        {% endblock content %}
+
+        <!--Start footer-->
+        {% include 'web_banana/footer.html' %}
+        <!--End footer-->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>
