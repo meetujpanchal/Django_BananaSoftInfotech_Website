@@ -49,7 +49,8 @@ def contactus(request):
 
 def careerpg(request):
     sliders = Tblslider.objects.all()
-    return render(request,'web_banana/career.html',{'sliders':sliders})
+    stud = TblTeam.objects.all()
+    return render(request,'web_banana/career.html',{'sliders':sliders,'stud':stud})
 
 def price(request):
     sliders = Tblslider.objects.all()
