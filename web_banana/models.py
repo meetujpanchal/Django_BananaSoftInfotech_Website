@@ -89,3 +89,6 @@ class Story(models.Model):
 
     def __str__(self):
         return "%s" %(self.title)    
+
+class Tblevents(models.Model):
+    events_pic = models.FileField(upload_to= 'events/')

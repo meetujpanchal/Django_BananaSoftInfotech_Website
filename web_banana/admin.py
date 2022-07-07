@@ -2,7 +2,7 @@ from cgitb import strong
 from unicodedata import name
 from django.contrib import admin
 from import_export.admin import ImportExportModelAdmin
-from .models import TblTeam,Tblslider,Tblclient,Tblrecentwork,Tblcontact,Tbltestimonial,Tblenquiry,Category,Story
+from .models import TblTeam,Tblslider,Tblclient,Tblrecentwork,Tblcontact,Tbltestimonial,Tblenquiry,Category,Story,Tblevents
 
 # Register your models here.
 
@@ -42,3 +42,7 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(Story)
 class StoryAdmin(admin.ModelAdmin):
     list_display = ['id','category','title','portfol_img','navigatelink','description','publish']    
+
+@admin.register(Tblevents)
+class EventsAdmin(admin.ModelAdmin):
+    list_display = ['id','events_pic']

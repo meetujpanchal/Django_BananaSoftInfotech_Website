@@ -29,10 +29,10 @@
     <div class="row" data-aos="fade-up">
       <div class="col-lg-12 d-flex justify-content-center">
         <ul id="portfolio-flters">
-          <li data-filter="*" class="filter-active"><a href="{% url 'web_banana:story_list' %}">All</a></li>
+          <li data-filter="*" class="filter-active"><a href="{% url 'web_banana:story_list' %}"><strong style="color: black;">All</strong></a></li>
           {% for x in categories %}
            <li data-filter="">
-             <a href="{{x.get_absolute_url}}">{{x.name}}</a>
+             <a href="{{x.get_absolute_url}}"><strong style="color: black">{{x.name}}</strong></a>
            </li>
            {% endfor %}
         </ul>

@@ -11,7 +11,6 @@ urlpatterns = [
     path('Sevice/',views.services,name="service"),
     path('Contact_us/',views.contactus,name="contact"),
     path('career/',views.careerpg,name="careerp"),
-    path('pricing/',views.price,name="pricp"),
     path('potfolio/',views.story_list,name="story_list"),
     path('potfolio/<slug:category_slug>',views.story_list,name="story_category"),
     path('client/',views.clnt,name="cnt"),

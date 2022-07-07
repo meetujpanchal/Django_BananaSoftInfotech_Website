@@ -1,5 +1,5 @@
 from django.shortcuts import render , get_object_or_404
-from .models import TblTeam, Tblclient,Tblslider,Tblcontact,Tbltestimonial,Tblenquiry,Tblrecentwork,Category,Story
+from .models import TblTeam, Tblclient, Tblevents,Tblslider,Tblcontact,Tbltestimonial,Tblenquiry,Tblrecentwork,Category,Story
 from .forms import Contact_us_form
 from django.http import HttpResponse
 import csv
@@ -50,9 +50,10 @@ def contactus(request):
 def careerpg(request):
     sliders = Tblslider.objects.all()
     stud = TblTeam.objects.all()
-    return render(request,'web_banana/career.html',{'sliders':sliders,'stud':stud})
+    event = Tblevents.objects.all()
+    return render(request,'web_banana/career.html',{'sliders':sliders,'stud':stud,'event':event})
 
-def price(request):
+#def price(request):
     sliders = Tblslider.objects.all()
     return render(request,'web_banana/pricing.html',{'sliders':sliders})
 
